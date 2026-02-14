@@ -40,3 +40,9 @@ const aktualisiert = produkte2.map(produkt => {
 });
 
 console.log(aktualisiert);
+
+const kleinsteId = Math.min(...produkte.map(p => Number(p.id)));
+
+const neuesArray = produkte.filter(p => Number(p.id) !== kleinsteId);
+
+console.log(neuesArray);
