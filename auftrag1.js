@@ -20,3 +20,7 @@ const benutzerMitAlter = setAlter(benutzer, 31);
 const finalerBenutzer = addBeruf(benutzerMitAlter, "Appli");
 
 console.log(finalerBenutzer)
+
+const { beruf, ...benutzerOhneBeruf } = benutzer;
+
+console.log(benutzerOhneBeruf);
