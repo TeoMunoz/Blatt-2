@@ -11,15 +11,12 @@ const produkte = [
     }
 ];
 
-const users = [
-    {
-        name: "Levi",
-        Vorname: "Akerman",
-        Alther: 29
-    },
-    {
-        name: "Erwin",
-        Vorname: "Smid",
-        Alther: 32
-    }
-];
+const neuesProdukt = {
+    id: "3",
+    name: "Tablet",
+    preis: 500
+};
+
+const erweitertesArray = [...produkte, neuesProdukt];
+
+console.log(erweitertesArray);
