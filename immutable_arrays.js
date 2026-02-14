@@ -46,3 +46,11 @@ const kleinsteId = Math.min(...produkte.map(p => Number(p.id)));
 const neuesArray = produkte.filter(p => Number(p.id) !== kleinsteId);
 
 console.log(neuesArray);
+
+const reviews = [4.5, 4.0, 5.0, 2.0, 1.0, 5.0, 3.0, 4.0, 1.0, 5.0, 4.5, 3.0, 2.5, 2.0];
+
+const summe = reviews.reduce((acc, wert) => acc + wert, 0);
+
+const durchschnitt = summe / reviews.length;
+
+console.log("Durchschnitt:", durchschnitt);
