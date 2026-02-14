@@ -54,3 +54,20 @@ const summe = reviews.reduce((acc, wert) => acc + wert, 0);
 const durchschnitt = summe / reviews.length;
 
 console.log("Durchschnitt:", durchschnitt);
+
+
+function gruppiereUndZaehle(values) {
+  return values.reduce((acc, wert) => {
+    if (wert >= 4) {
+      acc.good += 1;
+    } else if (wert >= 2.5) {
+      acc.ok += 1;
+    } else {
+      acc.bad += 1;
+    }
+    return acc;
+  }, { good: 0, ok: 0, bad: 0 });
+}
+
+const ergebnis = gruppiereUndZaehle(reviews);
+console.log(ergebnis);
