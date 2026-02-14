@@ -8,3 +8,27 @@ const addHello = addPrefix('Hello ');
 const ergebnis = namen.map(addHello);
 
 console.log(ergebnis);
+
+let myArray = [1, 2, 3, 4, 5];
+
+function getArrayLengthImpure() {
+  return myArray.length;
+}
+
+console.log(getArrayLengthImpure());
+
+myArray.push(6);
+console.log(getArrayLengthImpure());
+
+
+
+
+function getArrayLengthPure(array) {
+  return array.length;
+}
+
+const arr1 = [1, 2, 3, 4, 5];
+console.log(getArrayLengthPure(arr1));
+
+const arr2 = [10, 20, 30];
+console.log(getArrayLengthPure(arr2));
