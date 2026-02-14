@@ -8,7 +8,15 @@ const benutzer = {
     alter: 28
 };
 
-const aktualisierterBenutzer = {
-    ...benutzer,
-    beruf: "Appli"
-};
+function setAlter(user, neuesAlter) {
+  return { ...user, alter: neuesAlter };
+}
+
+function addBeruf(user, beruf) {
+  return { ...user, beruf };
+}
+
+const benutzerMitAlter = setAlter(benutzer, 31);
+const finalerBenutzer = addBeruf(benutzerMitAlter, "Appli");
+
+console.log(finalerBenutzer)
