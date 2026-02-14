@@ -1,0 +1,10 @@
+const curry = (fn) => (a) => (b) => fn(a, b);
+
+const namen = ['Joe', 'Jen', 'Steph', 'Allen', 'Gina'];
+
+const addPrefix = curry((prefix, str) => `${prefix}${str}`);
+const addHello = addPrefix('Hello ');
+
+const ergebnis = namen.map(addHello);
+
+console.log(ergebnis);
