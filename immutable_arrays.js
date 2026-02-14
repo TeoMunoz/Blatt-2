@@ -20,3 +20,23 @@ const neuesProdukt = {
 const erweitertesArray = [...produkte, neuesProdukt];
 
 console.log(erweitertesArray);
+
+const produkte2 = [
+    { 
+        id: "1", 
+        name: "Laptop", 
+        preis: 1200 },
+    { 
+        id: "2", 
+        name: "Smartphone", 
+        preis: 800 }
+];
+
+const aktualisiert = produkte2.map(produkt => {
+    if (produkt.id === "2") {
+        return { ...produkt, preis: 750 };
+    }
+    return produkt;
+});
+
+console.log(aktualisiert);
