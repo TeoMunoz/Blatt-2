@@ -7,3 +7,8 @@ const benutzer = {
     nachName: "Braun",
     alter: 28
 };
+
+const aktualisierterBenutzer = {
+    ...benutzer,
+    beruf: "Appli"
+};
